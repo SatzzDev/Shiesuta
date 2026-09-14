@@ -17,7 +17,7 @@ module.exports = {
         const track = result.tracks[0];
         if (isPlaylist) p.queue.add(result.tracks);
         else p.queue.add(track);
-        const msg = await m.reply(card({ title: `## ${EMOJI.success} ${isPlaylist ? t.playlistQueued : t.queued}`, body: isPlaylist ? `**${result.playlistName}**\n-# ${EMOJI.notes} ${result.tracks.length} ${t.tracks}  •  ${EMOJI.user} ${m.author.toString()}` : trackBody(track, m.author.toString(), t), thumb: track.thumbnail }));
+        const msg = await m.reply(card({ title: `## ${EMOJI.queueadd} ${isPlaylist ? t.playlistQueued : t.queued}`, body: isPlaylist ? `**${result.playlistName}**\n-# ${EMOJI.notes} ${result.tracks.length} ${t.tracks}  •  ${EMOJI.user} ${m.author.toString()}` : trackBody(track, m.author.toString(), t), thumb: track.thumbnail }));
         const list = state.pending.get(m.guild.id) ?? [];
         list.push(msg);
         state.pending.set(m.guild.id, list);

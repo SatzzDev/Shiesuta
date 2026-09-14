@@ -11,7 +11,7 @@ const client = new Client({
     intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildVoiceStates, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent]
 });
 
-const Nodes = cfg.nodes ?? [{ name: "main", url: "20.212.168.96:911", auth: "youshallnotpass", secure: false }];
+const Nodes = cfg.nodes
 
 const kazagumo = new Kazagumo({
     plugins: [

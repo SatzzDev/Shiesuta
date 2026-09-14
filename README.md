@@ -1,10 +1,5 @@
 <p align="center">
-<img
-width="2048"
-height="877"
-alt="Shiesuta"
-src="https://github.com/user-attachments/assets/b57d67da-9dc7-46a9-84a8-87008f567691"
-/>
+<img width="2048" height="877" alt="Shiesuta" src="https://github.com/user-attachments/assets/b57d67da-9dc7-46a9-84a8-87008f567691"/>
 </p>
 
 <h1 align="center">Shiesuta Music Bot</h1>
@@ -33,6 +28,8 @@ ___
 -   🔎 Search by song title or URL
 -   📋 Queue support
 -   ⏯️ Play / pause / resume
+-   🔀 Shuffle
+-   🔁 Loop Mode (track, queue, none)
 -   ⏭️ Skip tracks
 -   ⏹️ Stop and destroy the player
 -   🎧 Discord voice channel support
@@ -69,27 +66,28 @@ Create `config.json`:
 
 ``` json
 {
-"token": "YOUR_BOT_TOKEN",
-"prefix": ".",
-"defaultLang": "en",
-"nodes": [
-{
-"name": "main",
-"url": "localhost:80",
-"auth": "youshallnotpass",
-"secure": false
+	"token": "YOUR_BOT_TOKEN", // get it from https://discord.com/developers/applications/YOUR_APPLICATION/bot
+	"prefix": ".",
+	"defaultLang": "en",
+	"nodes": [
+		{
+			"name": "main",
+			"url": "localhost:80",
+			"auth": "youshallnotpass",
+			"secure": false
+		}
+	],
+	"spotify": {
+		"clientId": "YOUR_SPOTIFY_CLIENT_ID",  // get it from 
+		"clientSecret": "YOUR_SPOTIFY_CLIENT_SECRET",  // get it from https://developer.spotify.com/dashboard/YOUR_APPLICATION
+		"searchMarket": "ID"
+	},
+	"donate": {
+		"url": "https://saweria.co/Saturiaaa",
+		"chance": 0.1
+	}
 }
-],
-"spotify": {
-"clientId": "YOUR_SPOTIFY_CLIENT_ID",
-"clientSecret": "YOUR_SPOTIFY_CLIENT_SECRET",
-"searchMarket": "ID"
-},
-"donate": {
-"url": "https://saweria.co/Saturiaaa",
-"chance": 0.1
-}
-}
+
 ```
 
 > [!IMPORTANT]
@@ -127,20 +125,16 @@ Example node configuration:
 
 ``` js
 const Nodes = [
-{
-name: "main",
-url: "127.0.0.1:2333",
-auth: "youshallnotpass",
-secure: false
-}
-];
+		{
+			"name": "main",
+			"url": "localhost:80",
+			"auth": "youshallnotpass",
+			"secure": false
+		}
+	],
 ```
-
-Make sure the address, port, password, and `secure` setting match your
-Lavalink server.
-
-For production, it is recommended to keep Lavalink credentials outside
-public source code and load them from environment variables.
+> [!NOTE]
+> Make sure the address, port, password, and `secure` setting match your Lavalink server.
 
 ___
 
@@ -161,15 +155,19 @@ Shiesuta/
 
 ___
 
-## Available Commands
+## 🎮 Available Commands
 
-Command           Description
------------------ --------------------------------------
-`.play <query>`   Play or queue a song
-`.skip`           Skip the current track
-`.pause`          Pause playback
-`.resume`         Resume playback
-`.stop`           Stop playback and destroy the player
+| Command | Description |
+|:-------|:------------|
+| `.play <query>` | Play or queue a song |
+| `.skip` | Skip the current track |
+| `.shuffle` | Shuffle the queue |
+| `.loop <mode>` | Set loop mode: `track`, `queue`, or `none` |
+| `.pause` | Pause playback |
+| `.resume` | Resume playback |
+| `.stop` | Stop playback and destroy the player |
+| `.set lang` | Set the language |
+
 
 Examples:
 
@@ -180,6 +178,8 @@ Examples:
 .resume
 .skip
 .stop
+.loop track
+.shuffle
 ```
 
 ---
@@ -187,14 +187,12 @@ Examples:
 ## 🎧 Supported Sources
 
 <p align="center">
-<img src="https://img.badges.sh/badge?label=spotify&message=&color=ffc800&labelColor=1ED660&style=for-the-badge&logo=spotify&logoColor=212121&font=Poppins&labelFontWeight=700&messageFontWeight=700" alt="spotify: " />
+<a href="https://open.spotify.com"><img src="https://img.badges.sh/badge?label=spotify&message=&color=ffc800&labelColor=1ED660&style=for-the-badge&logo=spotify&logoColor=212121&font=Poppins&labelFontWeight=700&messageFontWeight=700" alt="spotify: " /></a>
 &nbsp;&nbsp;
-<img src="https://img.badges.sh/badge?label=youtube&message=&color=ffc800&labelColor=FF0033&style=for-the-badge&labelTextColor=ffffff&logo=youtube&logoColor=ffffff&font=Poppins&labelFontWeight=700&messageFontWeight=700" alt="youtube: " />
+<a href="https://www.youtube.com"><img src="https://img.badges.sh/badge?label=youtube&message=&color=ffc800&labelColor=FF0033&style=for-the-badge&labelTextColor=ffffff&logo=youtube&logoColor=ffffff&font=Poppins&labelFontWeight=700&messageFontWeight=700" alt="youtube: " /></a>
 &nbsp;&nbsp;
-<img src="https://img.badges.sh/badge?label=soundcloud&message=&color=ffc800&labelColor=FF4100&style=for-the-badge&labelTextColor=000000&logo=soundcloud&logoColor=000000&font=Poppins&labelFontWeight=700&messageFontWeight=700" alt="soundcloud: " />
-&nbsp;&nbsp;
-<img src="https://img.badges.sh/badge?label=apple+music&message=&color=ffc800&labelColor=F3475E&style=for-the-badge&labelTextColor=000000&logo=applemusic&logoColor=000000&font=Poppins&labelFontWeight=700&messageFontWeight=700" alt="apple music: " />
-</p>
+<a href="https://soundcloud.com"><img src="https://img.badges.sh/badge?label=soundcloud&message=&color=ffc800&labelColor=FF4100&style=for-the-badge&labelTextColor=000000&logo=soundcloud&logoColor=000000&font=Poppins&labelFontWeight=700&messageFontWeight=700" alt="soundcloud: " /></a>
+
 
 ---
 
@@ -202,25 +200,12 @@ Examples:
 
 If you enjoy **Shiesuta** and want to support its development:
 
-<a href="https://trakteer.id/saturiaaa">
-<strong>&nbsp;Trakteer</strong>
-</a>
-<a href="https://saweria.co/Saturiaaa">
-<strong>&nbsp;Saweria</strong>
-</a>
-<a href="https://sociabuzz.com/saturiaaa">
-<strong>&nbsp;Sociabuzz</strong>
-</a>
+<a href="https://trakteer.id/saturiaaa"><strong>&nbsp;Trakteer</strong></a><br>
+<a href="https://saweria.co/Saturiaaa"><strong>&nbsp;Saweria</strong></a><br>
+<a href="https://sociabuzz.com/saturiaaa"><strong>&nbsp;Sociabuzz</strong></a>
 
 
 ---
 
-
-
-<p align="center">
-Made with ❤️ for the Discord community.
-</p>
-
-<p align="center">
-<strong>Shiesuta Music Bot</strong>
-</p>
+<p align="center"> Made with ❤️ for the Discord community. </p>
+<p align="center"> <strong>Shiesuta Music Bot</strong></p>
