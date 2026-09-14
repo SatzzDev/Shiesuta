@@ -1,11 +1,21 @@
 <p align="center">
-  <img src="" />
+  <img
+    width="2048"
+    height="877"
+    alt="Shiesuta"
+    src="https://github.com/user-attachments/assets/b57d67da-9dc7-46a9-84a8-87008f567691"
+  />
 </p>
 
-# Shiesuta Discord Music Bot
+<h1 align="center">Shiesuta Music Bot</h1>
 
-A modern Discord music bot powered by **Discord.js**, **Kazagumo**,
-**Shoukaku**, and **Lavalink**.
+<p align="center">
+  A modern Discord music bot powered by
+  <strong>Discord.js</strong>,
+  <strong>Kazagumo</strong>,
+  <strong>Shoukaku</strong>, and
+  <strong>Lavalink</strong>.
+</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Bun-000000?style=for-the-badge&logo=bun&logoColor=white" alt="Bun">
