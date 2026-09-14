@@ -1,29 +1,26 @@
 <p align="center">
-  <img
-    width="2048"
-    height="877"
-    alt="Shiesuta"
-    src="https://github.com/user-attachments/assets/b57d67da-9dc7-46a9-84a8-87008f567691"
-  />
+<img
+width="2048"
+height="877"
+alt="Shiesuta"
+src="https://github.com/user-attachments/assets/b57d67da-9dc7-46a9-84a8-87008f567691"
+/>
 </p>
 
 <h1 align="center">Shiesuta Music Bot</h1>
 
 <p align="center">
-  A modern Discord music bot powered by
-  <strong>Discord.js</strong>,
-  <strong>Kazagumo</strong>,
-  <strong>Shoukaku</strong>, and
-  <strong>Lavalink</strong>.
+A modern Discord music bot powered by
+<strong>Discord.js</strong>,
+<strong>Kazagumo</strong>,
+<strong>Shoukaku</strong>, and
+<strong>Lavalink</strong>.
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Bun-000000?style=for-the-badge&logo=bun&logoColor=white" alt="Bun">
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
-  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js">
-  <img src="https://img.shields.io/badge/Discord.js-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord.js">
-  <img src="https://img.shields.io/badge/Lavalink-FFCC00?style=for-the-badge&logoColor=black" alt="Lavalink">
-  <img src="https://img.shields.io/badge/Kazagumo-111111?style=for-the-badge" alt="Kazagumo">
+<img src="https://img.badges.sh/badge?label=Node.js&message=&color=dfb317&labelColor=339933&style=for-the-badge&labelTextColor=ffffff&logo=nodedotjs&logoColor=ffffff&font=Poppins&labelFontWeight=700&messageFontWeight=700" alt="Node.js: " />
+<img src="https://img.badges.sh/badge?label=Discordj.s&message=&color=dfb317&labelColor=5865F2&style=for-the-badge&logo=discord&logoColor=ffffff&font=Poppins&labelFontWeight=700&messageFontWeight=700" alt="Discordj.s: " />
+<img src="https://img.badges.sh/badge?label=Lavalink&message=&color=dfb317&labelColor=FC552A&style=for-the-badge&labelTextColor=ffffff&logo=linksys&logoColor=ffffff&font=Poppins&labelFontWeight=700&messageFontWeight=700" alt="Lavalink: " />
 </p>
 
 
@@ -72,26 +69,26 @@ Create `config.json`:
 
 ``` json
 {
-	"token": "YOUR_BOT_TOKEN",
-	"prefix": ".",
-	"defaultLang": "en",
-	"nodes": [
-		{
-			"name": "main",
-			"url": "localhost:80",
-			"auth": "youshallnotpass",
-			"secure": false
-		}
-	],
-	"spotify": {
-		"clientId": "YOUR_SPOTIFY_CLIENT_ID",
-		"clientSecret": "YOUR_SPOTIFY_CLIENT_SECRET",
-		"searchMarket": "ID"
-	},
-	"donate": {
-		"url": "https://saweria.co/Saturiaaa",
-		"chance": 0.1
-	}
+"token": "YOUR_BOT_TOKEN",
+"prefix": ".",
+"defaultLang": "en",
+"nodes": [
+{
+"name": "main",
+"url": "localhost:80",
+"auth": "youshallnotpass",
+"secure": false
+}
+],
+"spotify": {
+"clientId": "YOUR_SPOTIFY_CLIENT_ID",
+"clientSecret": "YOUR_SPOTIFY_CLIENT_SECRET",
+"searchMarket": "ID"
+},
+"donate": {
+"url": "https://saweria.co/Saturiaaa",
+"chance": 0.1
+}
 }
 ```
 
@@ -130,12 +127,12 @@ Example node configuration:
 
 ``` js
 const Nodes = [
-  {
-    name: "main",
-    url: "127.0.0.1:2333",
-    auth: "youshallnotpass",
-    secure: false
-  }
+{
+name: "main",
+url: "127.0.0.1:2333",
+auth: "youshallnotpass",
+secure: false
+}
 ];
 ```
 
@@ -166,13 +163,13 @@ ___
 
 ## Available Commands
 
-  Command           Description
-  ----------------- --------------------------------------
-  `.play <query>`   Play or queue a song
-  `.skip`           Skip the current track
-  `.pause`          Pause playback
-  `.resume`         Resume playback
-  `.stop`           Stop playback and destroy the player
+Command           Description
+----------------- --------------------------------------
+`.play <query>`   Play or queue a song
+`.skip`           Skip the current track
+`.pause`          Pause playback
+`.resume`         Resume playback
+`.stop`           Stop playback and destroy the player
 
 Examples:
 
@@ -190,13 +187,13 @@ Examples:
 ## 🎧 Supported Sources
 
 <p align="center">
-  <img src="https://img.shields.io/badge/YouTube-red?style=for-the-badge&logo=youtube&logoColor=white" />
-  &nbsp;&nbsp;
-  <img src="https://img.shields.io/badge/Spotify-green?style=for-the-badge&logo=spotify&logoColor=white" />
-  &nbsp;&nbsp;
-  <img src="https://img.shields.io/badge/SoundCloud-orange?style=for-the-badge&logo=soundcloud&logoColor=white" />
-  &nbsp;&nbsp;
-  <img src="https://img.shields.io/badge/Apple%20Music-black?style=for-the-badge&logo=applemusic&logoColor=white" />
+<img src="https://img.badges.sh/badge?label=spotify&message=&color=ffc800&labelColor=1ED660&style=for-the-badge&logo=spotify&logoColor=212121&font=Poppins&labelFontWeight=700&messageFontWeight=700" alt="spotify: " />
+&nbsp;&nbsp;
+<img src="https://img.badges.sh/badge?label=youtube&message=&color=ffc800&labelColor=FF0033&style=for-the-badge&labelTextColor=ffffff&logo=youtube&logoColor=ffffff&font=Poppins&labelFontWeight=700&messageFontWeight=700" alt="youtube: " />
+&nbsp;&nbsp;
+<img src="https://img.badges.sh/badge?label=soundcloud&message=&color=ffc800&labelColor=FF4100&style=for-the-badge&labelTextColor=000000&logo=soundcloud&logoColor=000000&font=Poppins&labelFontWeight=700&messageFontWeight=700" alt="soundcloud: " />
+&nbsp;&nbsp;
+<img src="https://img.badges.sh/badge?label=apple+music&message=&color=ffc800&labelColor=F3475E&style=for-the-badge&labelTextColor=000000&logo=applemusic&logoColor=000000&font=Poppins&labelFontWeight=700&messageFontWeight=700" alt="apple music: " />
 </p>
 
 ---
@@ -205,41 +202,15 @@ Examples:
 
 If you enjoy **Shiesuta** and want to support its development:
 
-
-
-  <a href="https://trakteer.id/saturiaaa">
-    <img
-      src="https://trakteer.id/favicon/apple-touch-icon.png?id=9b4f9075447b25db37b9f204678cbc19"
-      width="32"
-      height="32"
-      align="middle"
-    />
-    <strong>&nbsp;Trakteer</strong>
-  </a>
-
-  &nbsp;&nbsp;&nbsp;
-
-  <a href="https://saweria.co/Saturiaaa">
-    <img
-      src="https://saweria.co/favicon.ico"
-      width="32"
-      height="32"
-      align="middle"
-    />
-    <strong>&nbsp;Saweria</strong>
-  </a>
-
-  &nbsp;&nbsp;&nbsp;
-
-  <a href="https://sociabuzz.com/saturiaaa">
-    <img
-      src="https://storage.sociabuzz.com/storage/account/image/logo.png"
-      width="32"
-      height="32"
-      align="middle"
-    />
-    <strong>&nbsp;Sociabuzz</strong>
-  </a>
+<a href="https://trakteer.id/saturiaaa">
+<strong>&nbsp;Trakteer</strong>
+</a>
+<a href="https://saweria.co/Saturiaaa">
+<strong>&nbsp;Saweria</strong>
+</a>
+<a href="https://sociabuzz.com/saturiaaa">
+<strong>&nbsp;Sociabuzz</strong>
+</a>
 
 
 ---
@@ -247,9 +218,9 @@ If you enjoy **Shiesuta** and want to support its development:
 
 
 <p align="center">
-  Made with ❤️ for the Discord community.
+Made with ❤️ for the Discord community.
 </p>
 
 <p align="center">
-  <strong>Shiesuta Music Bot</strong>
+<strong>Shiesuta Music Bot</strong>
 </p>
