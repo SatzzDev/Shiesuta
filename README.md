@@ -203,27 +203,48 @@ Examples:
 
 ## 💖 Support
 
-If you enjoy **Shiesuta** or find the project useful, consider supporting
-its development.
+If you enjoy **Shiesuta** and want to support its development:
 
-<p align="center">
+
+
+  <a href="https://trakteer.id/saturiaaa">
+    <img
+      src="https://trakteer.id/favicon/apple-touch-icon.png?id=9b4f9075447b25db37b9f204678cbc19"
+      width="32"
+      height="32"
+      align="middle"
+    />
+    <strong>&nbsp;Trakteer</strong>
+  </a>
+
+  &nbsp;&nbsp;&nbsp;
+
   <a href="https://saweria.co/Saturiaaa">
     <img
-      src="https://img.shields.io/badge/Support%20Development-Saweria-orange?style=for-the-badge"
-      alt="Support Development"
+      src="https://saweria.co/favicon.ico"
+      width="32"
+      height="32"
+      align="middle"
     />
+    <strong>&nbsp;Saweria</strong>
   </a>
-</p>
+
+  &nbsp;&nbsp;&nbsp;
+
+  <a href="https://sociabuzz.com/saturiaaa">
+    <img
+      src="https://storage.sociabuzz.com/storage/account/image/logo.png"
+      width="32"
+      height="32"
+      align="middle"
+    />
+    <strong>&nbsp;Sociabuzz</strong>
+  </a>
+
 
 ---
 
-## 📜 License
 
-This project is licensed under the **MIT License**.
-
-See the [`LICENSE`](LICENSE) file for more information.
-
----
 
 <p align="center">
   Made with ❤️ for the Discord community.
