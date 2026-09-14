@@ -65,31 +65,6 @@ Enable these intents in the Discord Developer Portal:
 
 ___
 
-## Installation
-
-Clone the repository:
-
-``` bash
-git clone https://github.com/USERNAME/Shiesuta.git
-cd Shiesuta
-```
-
-Install dependencies:
-
-
-### Bun
-
-``` bash
-bun install
-```
-
-### NPM
-
-``` bash
-npm install
-```
-
-___
 
 ## Configuration
 
@@ -120,9 +95,32 @@ Create `config.json`:
 }
 ```
 
+> [!IMPORTANT]
 > **Never publish your bot token.** Add `config.json` to `.gitignore`.
 
+
+
 ___
+
+## Quick Start
+
+``` bash
+# Clone the repository
+git clone https://github.com/USERNAME/Shiesuta.git
+cd Shiesuta
+
+# Copy the default configuration file
+cp config.json.example config.json
+
+# Install dependencies
+npm install
+
+# Start the bot
+npm start
+```
+
+___
+
 
 ## Lavalink
 
@@ -187,125 +185,50 @@ Examples:
 .stop
 ```
 
-___
+---
 
-## Spotify
+## 🎧 Supported Sources
 
-Spotify support can be provided through:
+<p align="center">
+  <img src="https://img.shields.io/badge/YouTube-red?style=for-the-badge&logo=youtube&logoColor=white" />
+  &nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/Spotify-green?style=for-the-badge&logo=spotify&logoColor=white" />
+  &nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/SoundCloud-orange?style=for-the-badge&logo=soundcloud&logoColor=white" />
+  &nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/Apple%20Music-black?style=for-the-badge&logo=applemusic&logoColor=white" />
+</p>
 
-``` text
-kazagumo-spotify
-```
+---
 
-Spotify integration generally resolves Spotify tracks/playlists to
-playable sources through Lavalink rather than directly streaming Spotify
-audio.
+## 💖 Support
 
-If your Lavalink source configuration requires additional plugins or
-source configuration, configure those on the Lavalink server.
+If you enjoy **Shiesuta** or find the project useful, consider supporting
+its development.
 
-___
-
-## Running
-
-### Bun
-
-Development:
-
-``` bash
-bun --watch index.js
-```
-
-Production:
-
-``` bash
-bun index.js
-```
-
-### Node.js
-
-Development:
-
-``` bash
-node --watch index.js
-```
-
-Production:
-
-``` bash
-node index.js
-```
-
-___
-
-## Environment & Security
-
-Do not commit secrets such as:
-
--   Discord bot tokens
--   Lavalink passwords
--   Spotify credentials
--   API keys
-
-Recommended `.gitignore`:
-
-``` gitignore
-node_modules/
-config.json
-.env
-.env.*
-*.log
-```
-
-Use `config.example.json` for public configuration templates.
-
-___
-
-## Tech Stack
-
-<p>
-  <a href="https://bun.sh/">
-    <img src="https://img.shields.io/badge/Bun-000000?style=for-the-badge&logo=bun&logoColor=white" alt="Bun">
-  </a>
-  <a href="https://discord.js.org/">
-    <img src="https://img.shields.io/badge/Discord.js-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord.js">
-  </a>
-  <a href="https://takiyo0.github.io/Kazagumo/">
-    <img src="https://img.shields.io/badge/Kazagumo-111111?style=for-the-badge&logo=musicbrainz&logoColor=white" alt="Kazagumo">
-  </a><br>
-
-  <a href="https://github.com/shipgirlproject/Shoukaku">
-    <img src="https://img.shields.io/badge/Shoukaku-111111?style=for-the-badge&logo=socketdotio&logoColor=white" alt="Shoukaku">
-  </a>
-  <a href="https://lavalink.dev/">
-    <img src="https://img.shields.io/badge/Lavalink-FFCC00?style=for-the-badge&logo=apache&logoColor=black" alt="Lavalink">
-  </a>
-  <a href="https://www.npmjs.com/package/kazagumo-spotify">
-    <img src="https://img.shields.io/badge/Spotify-1DB954?style=for-the-badge&logo=spotify&logoColor=white" alt="Spotify">
+<p align="center">
+  <a href="https://saweria.co/Saturiaaa">
+    <img
+      src="https://img.shields.io/badge/Support%20Development-Saweria-orange?style=for-the-badge"
+      alt="Support Development"
+    />
   </a>
 </p>
 
-## Development
+---
 
-Install dependencies:
+## 📜 License
 
-``` bash
-bun install
-```
+This project is licensed under the **MIT License**.
 
-Start in watch mode:
+See the [`LICENSE`](LICENSE) file for more information.
 
-``` bash
-bun --watch index.js
-```
+---
 
-Before deploying, verify:
+<p align="center">
+  Made with ❤️ for the Discord community.
+</p>
 
-1.  Discord bot token is valid.
-2.  Lavalink is online.
-3.  Lavalink credentials match the bot configuration.
-4.  The bot can connect to the target voice channel.
-5.  Required Discord intents are enabled.
-
-
-___
+<p align="center">
+  <strong>Shiesuta Music Bot</strong>
+</p>
