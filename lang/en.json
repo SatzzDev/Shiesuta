@@ -23,6 +23,10 @@
     "loopOffSub": "-# Loop disabled.",
     "queueEndedTitle": "Queue Ended",
     "queueEnded": "-# Queue ended. Leaving voice in 1 minute if no response.",
+    "queueTitle": "Queue",
+    "queueEmpty": "**Queue is empty.**",
+    "upNext": "Up Next",
+    "page": "Page {p}/{n} — use `.queue <page>`",
     "helpTitle": "Music Commands",
     "helpLines": [
         "`.play <query|url>` — Play a song / playlist",
