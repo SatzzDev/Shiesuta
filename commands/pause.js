@@ -1,11 +1,11 @@
 const { EMOJI } = require("../lib/emoji");
-const { card } = require("../lib/ui");
+const { reply } = require("../lib/ui");
 
 module.exports = {
     name: "pause",
     async run(m, args, { player, t }) {
-        if (!player) return m.reply(card({ title: `## ${EMOJI.error} Error`, body: t.noPlayer, color: 0xED4245 }));
+        if (!player) return m.reply(reply(`### ${EMOJI.error} Error`, `${t.noPLayer}`));
         player.pause(true);
-        return m.reply(card({ title: `## ${EMOJI.pause} ${t.pause}`, body: t.pauseSub, color: 0xFEE75C }));
+        return m.reply(reply(`### ${EMOJI.pause} ${t.pause}`));
     }
 };

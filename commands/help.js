@@ -7,7 +7,7 @@ module.exports = {
     name: "help",
     async run(m, args, { client, t }) {
         return m.reply(card({
-            title: `## ${EMOJI.music} ${t.helpTitle}`,
+            title: `### ${EMOJI.music} ${t.helpTitle}`,
             thumb: client.user.displayAvatarURL(),
             separator: true,
             body: [...t.helpLines].join("\n"),
