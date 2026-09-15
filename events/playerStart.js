@@ -1,6 +1,6 @@
 const { T } = require("../lib/i18n");
 const { nowPlayingCard } = require("../lib/ui");
-const { purge, clearIdle } = require("../lib/utils");
+const { purge, clearIdle, fetchLyrics, parseLrc } = require("../lib/utils");
 const state = require("../lib/state");
 
 module.exports = {
@@ -13,10 +13,12 @@ module.exports = {
         if (!channel) return;
         const t = T(player.guildId);
         const requester = track.requester?.toString() ?? t.unknown;
-        const msg = await channel.send(nowPlayingCard(player.guildId, track, requester, null, 0)).catch(() => null);
+        const lyrics = await fetchLyrics(track);
+        const lines = lyrics?.syncedLyrics ? parseLrc(lyrics.syncedLyrics) : [];
+        const msg = await channel.send(nowPlayingCard(player.guildId, track, requester, lines, 0)).catch(() => null);
         if (!msg) return;
         state.pending.set(player.guildId, [msg]);
-        state.npState.set(player.guildId, { msg, track, requester, lines: null, last: -1 });
+        state.npState.set(player.guildId, { msg, track, requester, lines, last: 0 });
         state.posState.set(player.guildId, { pos: 0, at: Date.now(), paused: false });
     }
 };

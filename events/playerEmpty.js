@@ -17,10 +17,10 @@ module.exports = {
         let endedMsg = null;
         if (channel) endedMsg = await channel.send(card({
             title: `## ${EMOJI.music} ${T(player.guildId).queueEndedTitle}`,
-            body: `${mentions ? `${mentions}\n` : ""}${T(player.guildId).queueEnded}`,
+            body: `${mentions ? `${mentions}\n` : ""}${T(player.guildId).queueEnded} <t:${Math.floor(Date.now() / 1000) + 60}:R>`,
             thumb: channel.client.user.displayAvatarURL()
         })).catch(() => { });
         startIdle(ctx.kazagumo, player.guildId);
-        setTimeout(() => endedMsg?.delete().catch(() => { }), 10_000);
+        setTimeout(() => endedMsg?.delete().catch(() => { }), 60_000);
     }
 };

@@ -1,4 +1,4 @@
-const { LANGS, setLang } = require("../lib/i18n");
+const { LANGS, setLang, T } = require("../lib/i18n");
 const { EMOJI } = require("../lib/emoji");
 const { reply } = require("../lib/ui");
 
@@ -8,6 +8,6 @@ module.exports = {
         const lang = args[1]?.toLowerCase();
         if (args[0]?.toLowerCase() !== "lang" || !LANGS[lang]) return m.reply(reply(`### ${EMOJI.error} Error`, `${t.setLangBad}`));
         setLang(m.guild.id, lang);
-        return m.reply(reply(`### ${EMOJI.check} Language`));
+        return m.reply(reply(`### ${EMOJI.check} Language`, T(m.guild.id).setLangOk));
     }
 };
