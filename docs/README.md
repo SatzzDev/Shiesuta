@@ -52,4 +52,4 @@ The static files in `docs/` can be served by any static host. Just point the roo
 ## Notes
 
 - All internal paths are **relative** (required for GitHub Pages Project Pages).
-- The Discord invite link uses a placeholder client ID (`123456789012345678`) — replace it with your real application ID.
+- The Discord invite link uses the real application ID (`1549143093272645712`) with `bot` + `applications.commands` scopes.
